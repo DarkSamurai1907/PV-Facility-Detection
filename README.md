@@ -27,7 +27,8 @@ Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
 
 A basic U-NET is implemented in PyTorch. The architecture is given below:
 
-![unet architecture.png]([https://prod-files-secure.s3.us-west-2.amazonaws.com/e89ed1a6-340c-4b0a-81a3-1bb32041cfad/f48bb465-cac7-4af0-a148-a4f2a7a18664/unet_architecture.png](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*f7YOaE4TWubwaFF7Z1fzNw.png))
+![image](https://github.com/DarkSamurai1907/PV-Facility-Detection/assets/99598258/b5436f5b-4df0-4273-aef8-4dbbf2bda17e)
+
 
 ### Data loading and other utils
 
