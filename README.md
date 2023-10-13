@@ -23,7 +23,7 @@ Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
     
     This was repeated for all downloaded S2A images.
     
-3. RoboFlow was to annotate the images. The software uses an AI enhanced smart polygon for manually annotating the several cropped images of the PV Facilities. 
+3. RoboFlow was used to annotate the images. The software uses an AI enhanced smart polygon for manually annotating the several cropped images of the PV Facilities. 
 4. The dataset is now preprocessed - separated into 2x2 tiles to increase the number of images followed by Data Augmentation - horizontal and vertical rotation. The total number of images available are 992.
 5. The images are imported and downloaded, with the annotations contained in a JSON file.  
 
