@@ -3,7 +3,11 @@ A paper replicating project.
 
 Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
 
-[Version 1](https://www.notion.so/Version-1-3883933c4eba4cbd98737b0836cd7677?pvs=21)
+## Steps to run
+1. Download the code.
+2. Install all the requirements.
+3. Ensure the annotations and images are present in one folder. Enter the path of that folder in the hyperparameters section.
+4. Run train.py.
 
 ## Steps Involved
 
