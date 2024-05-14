@@ -4,7 +4,8 @@ A paper replicating project.
 Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
 https://doi.org/10.1117/1.JRS.17.014516
 
-ALL UPDATED CODE IS PRESENT ONLY IN "PV_Facility_Detection.ipynb". This includes training the multi-spectral images.
+**ALL UPDATED CODE IS PRESENT IN "PV_Facility_Detection.ipynb"**. 
+This includes training the multi-spectral images.
 
 ## Steps to run
 1. Download the code.
