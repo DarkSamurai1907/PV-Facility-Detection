@@ -1,7 +1,7 @@
 # PV-Facility-Detection
-A paper replicating project.
 
 Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
+A paper replicating project.
 https://doi.org/10.1117/1.JRS.17.014516
 
 **ALL UPDATED CODE IS PRESENT IN "PV_Facility_Detection.ipynb"**. 
