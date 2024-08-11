@@ -1,6 +1,7 @@
 # PV-Facility-Detection
 
-Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
+Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method.
+
 A paper replicating project.
 
 Zixuan Dui, Yongjian Huang, Jiuping Jin, Qianrong Gu, "Automatic detection of photovoltaic facilities from Sentinel-2 observations by the enhanced U-Net method," J. Appl. Rem. Sens. 17(1) 014516 (6 March 2023) https://doi.org/10.1117/1.JRS.17.014516
