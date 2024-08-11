@@ -2,7 +2,8 @@
 
 Automatic Detection of Photovoltaic Facilities using the Enhanced U-NET method
 A paper replicating project.
-https://doi.org/10.1117/1.JRS.17.014516
+
+Zixuan Dui, Yongjian Huang, Jiuping Jin, Qianrong Gu, "Automatic detection of photovoltaic facilities from Sentinel-2 observations by the enhanced U-Net method," J. Appl. Rem. Sens. 17(1) 014516 (6 March 2023) https://doi.org/10.1117/1.JRS.17.014516
 
 **ALL UPDATED CODE IS PRESENT IN "PV_Facility_Detection.ipynb"**. 
 This includes training the multi-spectral images.
@@ -17,26 +18,21 @@ This includes training the multi-spectral images.
 
 ### Dataset Preparation
 
-1. Create an account on scihub. This will give access to various Sentinel Satellite image data.
+1. An account is created on []([http://scihub.copernicus.eu/dhus](https://dataspace.copernicus.eu/)). This will provide access to Sentinel satellite image data.
 
-[](http://scihub.copernicus.eu/dhus)
-
-1. The required area is zoomed and scanned for obtaining various Sentinel - 2 S2A products. The appropriate images with minimal cloud cover are chosen and downloaded.
+2. The required area is zoomed and scanned for obtaining various Sentinel - 2 S2A products. The appropriate images with minimal cloud cover are chosen and downloaded.
     - Each image is approximately 1 GB large and contains  geo-spatial and spectral image data.
-2. The QGIS tool is used to add the TCI (True Color Image) layer of each image only. The required area that mainly contains the PV Facilities is extracted, which were saved as separate images in JPEG format.
+3. The QGIS tool is used to add the TCI (True Color Image) layer of each image only. The required area that mainly contains the PV Facilities is extracted, which were saved as separate images in JPEG format.
     
     This was repeated for all downloaded S2A images.
     
-3. RoboFlow was used to annotate the images. The software uses an AI enhanced smart polygon for manually annotating the several cropped images of the PV Facilities. 
-4. The dataset is now preprocessed - separated into 2x2 tiles to increase the number of images followed by Data Augmentation - horizontal and vertical rotation. The total number of images available are 992.
-5. The images are imported and downloaded, with the annotations contained in a JSON file.  
+4. RoboFlow was used to annotate the images. The software uses an AI enhanced smart polygon for manually annotating the several cropped images of the PV Facilities. 
+5. The dataset is now preprocessed - separated into 2x2 tiles to increase the number of images followed by Data Augmentation - horizontal and vertical rotation. The total number of images are 992.
+6. The images are imported and downloaded, with the annotations contained in a JSON file.  
 
 ### The Model
 
-A basic U-NET is implemented in PyTorch. The architecture is given below:
-
-![image](https://github.com/DarkSamurai1907/PV-Facility-Detection/assets/99598258/b5436f5b-4df0-4273-aef8-4dbbf2bda17e)
-
+A basic U-NET is implemented in PyTorch. The enhanced U-Net is coded in the notebook file. It contains an additional U-Net called Multi-Spectral 3D convolution path and a Multi-Scale Pooling Block as enhancements to the original architecture.
 
 ### Data loading and other utils
 
@@ -49,9 +45,3 @@ A basic U-NET is implemented in PyTorch. The architecture is given below:
 
 - An initial learning rate of 1e-5 is set along with a learning rate scheduler which gradually decreases the learning rate by a factor of 0.1 if the validation loss starts plateauing, with a minimum learning rate of 1e-7. The model ceases training if the validation loss doesn’t improve for 5 epochs.
 - An initial 50 number of epochs is set, but the training ceases before it reaches this value.
-
-### Final Test Metrics
-
-### Changes to the initial version
-
-The second version will include high quality advanced images of 12 channels carrying spectral as well as spatial data
